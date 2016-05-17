@@ -1,0 +1,23 @@
+#This shell is created by masterjkk (v@kkmir.cn)
+#!/bin/sh
+while true
+do
+if [ -f "/tmp/vpn_status_check.lock" ]
+then
+        exit 0
+fi
+VPN_CONN=`ifconfig | grep ppp0`
+
+if [ -z "$VPN_CONN" ]
+then
+        touch /tmp/vpn_status_check.lock
+        echo WAN_VPN_RECONNECT at: >> /tmp/vpn_status_check_reconn.log
+        date >> /tmp/vpn_status_check_reconn.log
+        pon vpnroute
+        sleep 20
+        rm /tmp/vpn_status_check.lock
+else
+        date > /tmp/vpn_status_check.log
+        sleep 5
+fi
+done
