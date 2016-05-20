@@ -7,4 +7,4 @@ This shell script is intended to monitor if your pptp vpn connection is off, and
 5 Enjoy it!  <br>
 
 # PPTP VPN 断线重连脚本
-见英文介绍，：）
+见英文介绍 ：）
