@@ -1,5 +1,5 @@
-#This shell is created by masterjkk (v@kkmir.cn)
 #!/bin/sh
+#This shell is created by masterjkk (v@kkmir.cn)
 while true
 do
 if [ -f "/tmp/vpn_status_check.lock" ]
